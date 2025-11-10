@@ -16,12 +16,14 @@ defineProps({
 
 <style scoped>
 .my-alert {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px 16px;
+  border-radius: 8px;
   color: white;
-  margin: 8px 0;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
+/* Type-specific colors */
 .info {
   background-color: #2196f3;
 }

@@ -11,6 +11,7 @@
       <!-- Section: Badges -->
       <section class="section">
         <h2>Badges</h2>
+        <p>Mostra etiquetes amb diferents colors:</p>
         <div class="badge-container">
           <MyBadge text="New" color="#4caf50"/>
           <MyBadge text="Hot" color="#f44336"/>
@@ -22,6 +23,7 @@
       <!-- Section: Alerts -->
       <section class="section">
         <h2>Alerts</h2>
+        <p>Missatges d’alerta segons el tipus:</p>
         <div class="alert-container">
           <MyAlert type="info" message="This is an info alert"/>
           <MyAlert type="success" message="Success! Everything worked"/>
@@ -32,6 +34,7 @@
       <!-- Section: Modal -->
       <section class="section">
         <h2>Modal</h2>
+        <p>Pots obrir un modal fent clic al botó:</p>
         <button class="primary-btn" @click="showModal = true">Open Modal</button>
 
         <MyModal :visible="showModal" title="Example Modal" @close="showModal=false">
@@ -72,6 +75,8 @@ const showModal = ref(false)
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
+  background-color: #f5f5f5;
+  min-height: 100vh;
 }
 
 /* Section styling */
@@ -85,7 +90,7 @@ const showModal = ref(false)
 
 /* Section headings */
 h2 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #35495e;
 }
 
@@ -94,6 +99,7 @@ h2 {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 /* Alert container */
@@ -101,6 +107,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 10px;
 }
 
 /* Buttons */
@@ -143,5 +150,25 @@ h2 {
   gap: 12px;
   align-items: center;
   margin-top: 15px;
+}
+
+/* Alerts styling (works with MyAlert scoped classes) */
+.my-alert {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.my-alert.info {
+  background-color: #2196f3;
+}
+.my-alert.success {
+  background-color: #4caf50;
+}
+.my-alert.error {
+  background-color: #f44336;
 }
 </style>
